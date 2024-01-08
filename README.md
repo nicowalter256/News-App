@@ -1,6 +1,6 @@
 # news app
 
-## News App | A flutter news app using an open api designed.
+## News App | A flutter news app using an open api.
 
 This app is used to display news articles, top headlines and news details
 
