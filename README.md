@@ -4,6 +4,8 @@
 
 This app is used to display news articles, top headlines and news details
 
+This User Interface is inspired by https://www.behance.net/gallery/185709789/Mobile-News-App-Design?tracking_source=search_projects&l=13
+
 ## Getting Started
 
 This app is built with [Flutter](https://flutter.dev/), a cross-platform mobile development framework. To get started, follow the [Flutter installation guide](https://flutter.dev/docs/get-started/install).
