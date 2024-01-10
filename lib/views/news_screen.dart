@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../Constants/constants.dart';
+import '../constants/constants.dart';
 import '../data/json_data.dart';
+import '../widgets/spacing.dart';
 
 class NewsScreen extends StatefulWidget {
   const NewsScreen({super.key});
@@ -68,20 +69,15 @@ class _NewsScreenState extends State<NewsScreen> {
           const SizedBox(
             height: 5,
           ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-            child: Container(
-              height: 1.2,
-              width: double.infinity,
-              color: Colors.grey[400],
-            ),
+          const Spacing(
+            height: 1.2,
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Container(
               height: 250,
               width: double.infinity,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 borderRadius: BorderRadius.all(
                   Radius.circular(10),
                 ),
@@ -149,7 +145,10 @@ class _NewsScreenState extends State<NewsScreen> {
                 ],
               ),
             ),
-          )
+          ),
+          const Spacing(
+            height: 0.5,
+          ),
         ],
       ),
     );
