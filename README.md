@@ -33,7 +33,7 @@ APIKEY = YOUR KEY
 
 
 
-![Uploading Simulator Screenshot - iPhone 14 Pro Max - 2024-01-10 at 16.14.11.png…]()
+![Simulator Screenshot - iPhone 14 Pro Max - 2024-01-10 at 16 14 11](https://github.com/Nicopee/News-App/assets/39907027/c7dbb196-f124-462f-97f9-5bbd2ef58a8f)
 
 
 
