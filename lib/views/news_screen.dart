@@ -75,6 +75,80 @@ class _NewsScreenState extends State<NewsScreen> {
               width: double.infinity,
               color: Colors.grey[400],
             ),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: Container(
+              height: 250,
+              width: double.infinity,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.all(
+                  Radius.circular(10),
+                ),
+              ),
+              child: Column(
+                children: [
+                  const Text(
+                    'Premier league updates and reactions to wales draw in the Euros',
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  SizedBox(
+                    height: 150,
+                    width: double.infinity,
+                    child: Image.network(
+                      'https://cdn.pixabay.com/photo/2024/01/04/16/48/landscape-8487906_1280.jpg',
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  const Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text('08 Hours ago'),
+                      Row(
+                        children: [
+                          Icon(
+                            Icons.thumb_up_sharp,
+                            size: 17,
+                          ),
+                          SizedBox(
+                            width: 3,
+                          ),
+                          Text('400'),
+                          SizedBox(
+                            width: 5,
+                          ),
+                          Icon(
+                            Icons.message,
+                            size: 17,
+                          ),
+                          SizedBox(
+                            width: 3,
+                          ),
+                          Text('220'),
+                          SizedBox(
+                            width: 5,
+                          ),
+                          Icon(
+                            Icons.forward_sharp,
+                            size: 17,
+                          ),
+                          SizedBox(
+                            width: 3,
+                          ),
+                          Text('102'),
+                        ],
+                      )
+                    ],
+                  )
+                ],
+              ),
+            ),
           )
         ],
       ),
