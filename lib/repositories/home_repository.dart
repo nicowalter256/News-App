@@ -47,8 +47,7 @@ class HomeRepository {
         articles.add(Article.fromJson(article));
       }
       return articles;
-    } catch (e, s) {
-      print("skksfkfsk:$s");
+    } catch (__) {
       rethrow;
     }
   }
