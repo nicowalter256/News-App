@@ -91,9 +91,6 @@ class _NewsScreenState extends State<NewsScreen> {
                             );
                           }),
                         ),
-                  const Spacing(
-                    height: 0.5,
-                  ),
                 ],
               ),
             ),

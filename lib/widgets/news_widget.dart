@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import '../models/articles.dart';
+import 'spacing.dart';
 
 class NewsWidget extends StatelessWidget {
   final Article article;
@@ -19,6 +20,7 @@ class NewsWidget extends StatelessWidget {
           ),
         ),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
               article.title,
@@ -81,7 +83,10 @@ class NewsWidget extends StatelessWidget {
                   ],
                 )
               ],
-            )
+            ),
+            const Spacing(
+              height: 0.5,
+            ),
           ],
         ),
       ),

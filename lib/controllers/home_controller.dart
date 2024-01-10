@@ -9,6 +9,9 @@ class HomeController extends ChangeNotifier {
   List<Source> sources = [];
   List<Article> articles = [];
   dynamic exception;
+  int pageSize = 10;
+  int page = 1;
+  String source = "al-jazeera-english";
 
   Future fetchNewsSources() async {
     try {
@@ -23,7 +26,8 @@ class HomeController extends ChangeNotifier {
   Future fetchNews() async {
     try {
       articles = [];
-      List<Article> results = await HomeRepository.getNews();
+      List<Article> results =
+          await HomeRepository.getNews(page, pageSize, source);
       articles.addAll(results);
     } catch (e) {
       rethrow;

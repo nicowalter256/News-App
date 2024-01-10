@@ -28,7 +28,8 @@ class HomeRepository {
     }
   }
 
-  static Future<List<Article>> getNews() async {
+  static Future<List<Article>> getNews(
+      int page, int pageSize, String source) async {
     BaseOptions baseOptions = BaseOptions(
         baseUrl: Constants.baseURL,
         method: 'GET',
@@ -38,7 +39,8 @@ class HomeRepository {
 
     try {
       final response = await dio.request(
-          'everything?apiKey=${Constants.apiKey} &pageSize=10&page=1&sources=abc-news');
+        'everything?apiKey=${Constants.apiKey} &pageSize=$pageSize&page=$page&sources=$source',
+      );
 
       List<Article> articles = [];
       for (Map article in response.data['articles']) {
