@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'views/index.dart';
 import 'views/news_screen.dart';
 
 void main() {
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const NewsScreen(),
+      home: const IndexPage(),
     );
   }
 }

@@ -6,5 +6,5 @@ class Constants {
   static const Color primaryColor = Colors.green;
   static const int timeOut = 155000;
   static const String loadingGif = "assets/loading.json";
-  static const String apiKey = "";
+  static const String apiKey = "3525f8fee50d48d9b73ddb153c519bb8";
 }

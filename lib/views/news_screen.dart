@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-
 import '../constants/constants.dart';
 import '../controllers/home_controller.dart';
-import '../data/json_data.dart';
 import '../widgets/loading_widget.dart';
 import '../widgets/news_widget.dart';
 import '../widgets/sources_widget.dart';
