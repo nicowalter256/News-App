@@ -1,10 +1,40 @@
-# news app
+# News App
 
 ## News App | A flutter news app using an open api.
+
+Summary
+
+A simple news app that gets news sources and displays, search news from different sources using an open api
+
+API : https://newsapi.org/
+
+Reason for choosing mentioned API :
+
+News API provides upto 100 free api requets per day.
+
+News API is a simple HTTP REST API for searching and retrieving live articles from all over the web. It can help you answer questions like:
+
+What top stories is TechCrunch running right now?
+What new articles were published about the next iPhone today?
+Has my company or product been mentioned or reviewed by any blogs recently?
+
+More info on how to make an api call here.
 
 This app is used to display news articles, top headlines and news details
 
 This User Interface is inspired by https://www.behance.net/gallery/185709789/Mobile-News-App-Design?tracking_source=search_projects&l=13
+
+
+## Pre-requisite
+
+In Constants.dart file, add your api key generated from https://newsapi.org/
+
+APIKEY = YOUR KEY
+
+
+<img src="https://github.com/Nicopee/News-App/assets/39907027/c7dbb196-f124-462f-97f9-5bbd2ef58a8f" width="150" height="280">
+
+
 
 ## Getting Started
 
