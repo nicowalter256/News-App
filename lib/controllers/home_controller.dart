@@ -51,6 +51,10 @@ class HomeController extends ChangeNotifier {
       articles = [];
       List<Article> results =
           await HomeRepository.getNews(page, pageSize, source);
+      if (results.length < pageSize) {
+        refreshController?.loadNoData();
+      }
+
       articles.addAll(results);
     } catch (e) {
       rethrow;
