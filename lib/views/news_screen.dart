@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pull_to_refresh/pull_to_refresh.dart';
 import '../constants/constants.dart';
 import '../controllers/home_controller.dart';
 import '../widgets/loading_widget.dart';
@@ -15,9 +16,12 @@ class NewsScreen extends StatefulWidget {
 }
 
 class _NewsScreenState extends State<NewsScreen> {
+  RefreshController refreshController =
+      RefreshController(initialRefresh: false);
   HomeController homeController = HomeController();
   @override
   void initState() {
+    homeController.refreshController = refreshController;
     homeController.init();
     super.initState();
   }
@@ -89,6 +93,53 @@ class _NewsScreenState extends State<NewsScreen> {
                             );
                           }),
                         ),
+                  // : SmartRefresher(
+                  //     controller: RefreshController(),
+                  //     enablePullDown: false,
+                  //     enablePullUp: true,
+                  //     physics: const BouncingScrollPhysics(),
+                  //     onLoading: () => model.fetchMore(),
+                  //     footer: CustomFooter(builder: (context, mode) {
+                  //       if (mode == LoadStatus.idle) {
+                  //         return Container();
+                  //       } else if (mode == LoadStatus.loading) {
+                  //         return const LoadingWidget();
+                  //       } else if (mode == LoadStatus.failed) {
+                  //         return GestureDetector(
+                  //           child: const Row(
+                  //               mainAxisAlignment: MainAxisAlignment.center,
+                  //               children: <Widget>[
+                  //                 Icon(
+                  //                   Icons.error,
+                  //                   color: Constants.errorColor,
+                  //                 ),
+                  //                 SizedBox(width: 20),
+                  //                 Text(
+                  //                   'Retry',
+                  //                   style: TextStyle(
+                  //                       fontSize: 16, color: Colors.black),
+                  //                 )
+                  //               ]),
+                  //           onTap: () {
+                  //             model.fetchMore();
+                  //           },
+                  //         );
+                  //       } else if (mode == LoadStatus.canLoading) {
+                  //         return Container();
+                  //       } else {
+                  //         return Container();
+                  //       }
+                  //     }),
+                  //     child: Column(
+                  //       children:
+                  //           List.generate(model.articles.length, (index) {
+                  //         var data = model.articles[index];
+                  //         return NewsWidget(
+                  //           article: data,
+                  //         );
+                  //       }),
+                  //     ),
+                  //   ),
                 ],
               ),
             ),
