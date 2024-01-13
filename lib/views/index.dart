@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:news_app/constants/constants.dart';
 
 import 'news_screen.dart';
+import 'search_page.dart';
 
 class IndexPage extends StatefulWidget {
   const IndexPage({Key? key}) : super(key: key);
@@ -34,7 +35,7 @@ class _IndexPageState extends State<IndexPage> {
           NewsScreen(),
           NewsScreen(),
           NewsScreen(),
-          NewsScreen(),
+          SearchPage(),
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
