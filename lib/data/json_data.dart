@@ -1,32 +1,32 @@
 import 'package:flutter/material.dart';
 
-List<Map<String, dynamic>> newsOutLets = [
+List<Map<String, dynamic>> categories = [
   {
     'id': 1,
-    'image': 'assets/cnn.png',
+    'name': 'business',
   },
   {
     'id': 2,
-    'image': 'assets/bbc.png',
+    'name': 'entertainment',
   },
   {
     'id': 3,
-    'image': 'assets/cnbc.png',
+    'name': 'general',
   },
   {
     'id': 4,
-    'image': 'assets/abc.png',
+    'name': 'health',
   },
   {
     'id': 5,
-    'image': 'assets/al-jazeera.png',
+    'name': 'science',
   },
   {
     'id': 6,
-    'image': 'assets/msn.png',
+    'name': 'sports',
   },
   {
     'id': 6,
-    'image': 'assets/reuters.png',
+    'name': 'technology',
   }
 ];

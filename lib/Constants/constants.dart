@@ -8,4 +8,6 @@ class Constants {
   static const int timeOut = 155000;
   static const String loadingGif = "assets/loading.json";
   static const String apiKey = "";
+  static const String profileImage =
+      "https://cdn.pixabay.com/photo/2020/09/18/05/58/lights-5580916_1280.jpg";
 }
