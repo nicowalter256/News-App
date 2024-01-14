@@ -28,5 +28,9 @@ List<Map<String, dynamic>> categories = [
   {
     'id': 6,
     'name': 'technology',
+  },
+  {
+    'id': 7,
+    'name': 'Religion',
   }
 ];
