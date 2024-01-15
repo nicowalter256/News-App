@@ -32,8 +32,6 @@ In Constants.dart file, add your api key generated from https://newsapi.org/
 APIKEY = YOUR KEY
 
 
-<img src="https://github.com/Nicopee/News-App/assets/39907027/c7dbb196-f124-462f-97f9-5bbd2ef58a8f" width="150" height="280">
-
 <img src="https://github.com/Nicopee/News-App/assets/39907027/2c22d3a2-c421-4f78-9998-0bf7a1cafa43" width="150" height="280">
 
 
