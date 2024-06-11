@@ -7,7 +7,7 @@ class Constants {
   static const Color errorColor = Colors.red;
   static const int timeOut = 155000;
   static const String loadingGif = "assets/loading.json";
-  static const String apiKey = "";
+  static const String apiKey = "3525f8fee50d48d9b73ddb153c519bb8";
   static const String profileImage =
       "https://cdn.pixabay.com/photo/2020/09/18/05/58/lights-5580916_1280.jpg";
 }

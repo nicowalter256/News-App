@@ -23,8 +23,15 @@ class _NewsScreenState extends State<NewsScreen> {
   }
 
   @override
+  void dispose() {
+    homeController.dispose();
+    super.dispose();
+  }
+
+  @override
   void initState() {
-    homeController.init();
+    homeController.fetchNews();
+    homeController.fetchNewsSources();
     super.initState();
   }
 
@@ -72,8 +79,13 @@ class _NewsScreenState extends State<NewsScreen> {
                             itemCount: model.sources.length,
                             itemBuilder: (context, index) {
                               var data = model.sources[index];
-                              return SourcesWidget(
-                                source: data,
+                              return GestureDetector(
+                                onTap: () => {
+                                  model.fetchNews(source: data.id),
+                                },
+                                child: SourcesWidget(
+                                  source: data,
+                                ),
                               );
                             },
                           ),
@@ -91,6 +103,7 @@ class _NewsScreenState extends State<NewsScreen> {
                           child: RefreshIndicator(
                             onRefresh: doRefresh,
                             child: CustomScrollView(
+                                reverse: true,
                                 physics: const AlwaysScrollableScrollPhysics(),
                                 slivers: [
                                   SliverList(

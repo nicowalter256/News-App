@@ -1,4 +1,6 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:intl/intl.dart';
 import '../models/articles.dart';
 import 'spacing.dart';
@@ -38,8 +40,13 @@ class NewsWidget extends StatelessWidget {
               SizedBox(
                 height: 150,
                 width: double.infinity,
-                child: Image.network(
-                  article.urlToImage,
+                child: CachedNetworkImage(
+                  progressIndicatorBuilder: (context, url, progress) => Center(
+                    child: CircularProgressIndicator(
+                      value: progress.progress,
+                    ),
+                  ),
+                  imageUrl: article.urlToImage,
                   fit: BoxFit.cover,
                 ),
               ),
