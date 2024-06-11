@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pull_to_refresh/pull_to_refresh.dart';
+// import 'package:pull_to_refresh/pull_to_refresh.dart';
 import '../constants/constants.dart';
 import '../controllers/home_controller.dart';
 import '../widgets/loading_widget.dart';
@@ -16,12 +16,14 @@ class NewsScreen extends StatefulWidget {
 }
 
 class _NewsScreenState extends State<NewsScreen> {
-  RefreshController refreshController =
-      RefreshController(initialRefresh: false);
   HomeController homeController = HomeController();
+
+  Future<dynamic> doRefresh() async {
+    homeController.fetchMore();
+  }
+
   @override
   void initState() {
-    homeController.refreshController = refreshController;
     homeController.init();
     super.initState();
   }
@@ -84,15 +86,28 @@ class _NewsScreenState extends State<NewsScreen> {
                   ),
                   model.loading
                       ? const LoadingWidget()
-                      : Column(
-                          children:
-                              List.generate(model.articles.length, (index) {
-                            var data = model.articles[index];
-                            return NewsWidget(
-                              article: data,
-                            );
-                          }),
-                        ),
+                      : SizedBox(
+                          height: MediaQuery.sizeOf(context).height,
+                          child: RefreshIndicator(
+                            onRefresh: doRefresh,
+                            child: CustomScrollView(
+                                physics: const AlwaysScrollableScrollPhysics(),
+                                slivers: [
+                                  SliverList(
+                                    delegate: SliverChildBuilderDelegate(
+                                      (BuildContext context, int index) {
+                                        var data = model.articles[index];
+                                        return NewsWidget(
+                                          article: data,
+                                        );
+                                      },
+                                      childCount: model.articles.length,
+                                    ),
+                                  )
+                                ]),
+                          ),
+                        )
+
                   // : SmartRefresher(
                   //     controller: RefreshController(),
                   //     enablePullDown: false,

@@ -12,7 +12,7 @@ class HomeController extends ChangeNotifier {
   dynamic exception;
   int pageSize = 10;
   int page = 1;
-  String source = "al-jazeera-english";
+  String source = "abc-news";
   RefreshController? refreshController;
 
   void fetchMore() async {
@@ -22,11 +22,11 @@ class HomeController extends ChangeNotifier {
       List<Article> results =
           await HomeRepository.getNews(page, pageSize, source);
 
-      if (results.length < pageSize) {
-        refreshController?.loadNoData();
-      } else {
-        refreshController?.loadComplete();
-      }
+      // if (results.length < pageSize) {
+      //   refreshController?.loadNoData();
+      // } else {
+      //   refreshController?.loadComplete();
+      // }
       articles.addAll(results);
     } catch (_) {
       page = page - 1;
@@ -45,6 +45,19 @@ class HomeController extends ChangeNotifier {
       rethrow;
     }
   }
+
+  // void fetchMoreNews() async {
+  //   try {
+  //     nextPage = nextPage + 1;
+  //     List<People> results =
+  //         await ServiceRepository.fetchPeople(nextPage, perPage);
+  //     persons.addAll(results);
+  //   } catch (_) {
+  //     nextPage = nextPage - 1;
+  //   }
+
+  //   notifyListeners();
+  // }
 
   Future fetchNews() async {
     try {
