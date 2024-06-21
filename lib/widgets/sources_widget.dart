@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-
-import '../constants/constants.dart';
 import '../models/sources.dart';
 
 class SourcesWidget extends StatelessWidget {
