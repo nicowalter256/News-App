@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:news_app/models/articles.dart';
 import 'package:news_app/models/sources.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
-
 import '../repositories/home_repository.dart';
 
 class HomeController extends ChangeNotifier {

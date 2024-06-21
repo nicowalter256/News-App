@@ -15,7 +15,6 @@ Article _$ArticleFromJson(Map<dynamic, dynamic> json) {
     urlToImage: json['urlToImage'] as String,
     publishedAt: json['publishedAt'] as String,
     content: json['content'] as String,
-    //source: Source.fromJson(json['source'] as Map<String, dynamic>),
   );
 }
 
@@ -27,5 +26,4 @@ Map<String, dynamic> _$ArticleToJson(Article instance) => <String, dynamic>{
       'urlToImage': instance.urlToImage,
       'publishedAt': instance.publishedAt,
       'content': instance.content,
-      // 'source': instance.source,
     };
