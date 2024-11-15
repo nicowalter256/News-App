@@ -1,6 +1,6 @@
 # News App
 
-## News App | A flutter news app using an open API.
+# News App | A flutter news app using an open API.
 
 Summary
 
